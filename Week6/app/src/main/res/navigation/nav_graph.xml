@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboard1Fragment">
+    <fragment
+        android:id="@+id/onboard1Fragment"
+        android:name="com.example.onboarding.Onboard1Fragment"
+        android:label="Onboard1Fragment"
+        tools:layout="@layout/activity_main">
+        <action
+            android:id="@+id/action_onboard1Fragment_to_onboard2Fragment"
+            app:destination="@id/onboard2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboard2Fragment"
+        android:name="com.example.onboarding.Onboard2Fragment"
+        android:label="Onboard2Fragment"
+        tools:layout="@layout/onboarding2">
+        <action
+            android:id="@+id/action_onboard2Fragment_to_onboarding3Fragment"
+            app:destination="@id/onboarding3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboarding3Fragment"
+        android:name="com.example.onboarding.Onboarding3Fragment"
+        android:label="Onboarding3Fragment"
+        tools:layout="@layout/onboarding3">
+        <action
+            android:id="@+id/action_onboarding3Fragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.onboarding.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.onboarding.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/log_in">
+        <action
+            android:id="@+id/action_loginFragment_to_restaurantFragment"
+            app:destination="@id/restaurantFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.onboarding.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantFragment"
+        android:name="com.example.onboarding.RestaurantFragment"
+        android:label="RestaurantFragment"
+        tools:layout="@layout/restaurant_main">
+        <action
+            android:id="@+id/action_restaurantFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.onboarding.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/profile_screen">
+        <action
+            android:id="@+id/action_profileFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.onboarding.MovieFragment"
+        android:label="MovieFragment"
+        tools:layout="@layout/movie_fragment">
+        <action
+            android:id="@+id/action_movieFragment_to_topRateFragment"
+            app:destination="@id/topRateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/topRateFragment"
+        android:name="com.example.onboarding.TopRateFragment"
+        android:label="TopRateFragment"
+        tools:layout="@layout/top_rate_fragment">
+        <action
+            android:id="@+id/action_topRateFragment_to_movieFragment2"
+            app:destination="@id/movieFragment" />
+    </fragment>
+</navigation>
